@@ -74,3 +74,8 @@ while(True):
         b.clicked[input_height][input_width] = str(b.num_bombs_adjacent(input_height, input_width))
         if(num_clicks == b.height * b.width - b.num_bombs):
             userInput = input('You win!\n' + b.__str__() + "\nY to Quit\n")
+            if(userInput == "Y"):
+                break
+            else:
+                print("Starting a new game:\n")
+                b = Board()
